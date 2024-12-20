@@ -13,7 +13,15 @@ const CHRISTMAS_IMAGES = [
   'https://1250948203.rsc.cdn77.org/images/fff0778c-d7b8-4eee-b466-f956734aef66.jpg',
   'https://1250948203.rsc.cdn77.org/images/3211686b-e333-4e04-93f4-80a42d7a4e73.jpg',
   'https://1250948203.rsc.cdn77.org/images/3ddc42af-94e8-437b-967c-fe254ee070dc.jpg',
-  'https://1250948203.rsc.cdn77.org/images/daa08e22-80a4-4f8e-81c2-a46758da00dd.jpg'
+  'https://1250948203.rsc.cdn77.org/images/daa08e22-80a4-4f8e-81c2-a46758da00dd.jpg',
+  'https://1250948203.rsc.cdn77.org/images/a394f17b-18fa-4894-be40-bd8552211024.jpg',
+  'https://1250948203.rsc.cdn77.org/images/402df4f7-9919-4985-a142-906f90282290.jpg',
+  'https://1250948203.rsc.cdn77.org/images/6ffcd1ca-b65c-40d3-a94f-91a3fa7748f8.jpg',
+  'https://1250948203.rsc.cdn77.org/images/9e8958b2-93c7-4845-867b-eb2751960e93.jpg',
+  'https://1250948203.rsc.cdn77.org/images/16bde630-50fc-4a66-9c92-173c3ebecd9b.jpg',
+  'https://1250948203.rsc.cdn77.org/images/34e01fe9-77ba-4ded-94d6-2328b611566e.jpg',
+  'https://1250948203.rsc.cdn77.org/images/8db3427d-92e7-402e-8494-e7f698931f0e.jpg',
+  'https://1250948203.rsc.cdn77.org/images/0d4d32a6-3397-41ac-b799-6fade5d4d7b8.jpg'
 ];
 
 const CHRISTMAS_EMOJIS = ['🎄', '🎅', '❄️', '⛄', '🎁'];
