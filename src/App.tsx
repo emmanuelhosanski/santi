@@ -88,38 +88,37 @@ function App() {
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-red-600 mb-2">Santify</h1>
-          <p className="text-gray-600">Transform yourself into a festive character!</p>
+          <p className="text-lg text-gray-600">A Christmas Face Swap App</p>
         </header>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="space-y-6">
-            <ImageUploader 
-              onImageSelect={handleUserImageSelect}
-              onImageClear={handleUserImageClear}
-              label="Upload your photo"
-              currentImage={userImage}
-            />
-          </div>
+        <div className="w-full p-4 border-2 border-dashed border-gray-400">
+          <p className="text-center text-gray-600 mb-2">1. Upload your picture</p>
+          <ImageUploader 
+            onImageSelect={handleUserImageSelect}
+            onImageClear={handleUserImageClear}
+            label=""
+            currentImage={userImage}
+          />
+        </div>
 
-          <div className="space-y-6">
-            <h2 className="text-xl font-semibold text-gray-800">Choose a Christmas Character</h2>
-            <div className="grid grid-cols-2 gap-4">
-              {CHRISTMAS_IMAGES.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleTargetSelect(image)}
-                  className={`relative aspect-square rounded-lg overflow-hidden border-4 transition-all ${
-                    selectedTarget === image ? 'border-red-500 scale-105' : 'border-transparent hover:border-red-300'
-                  }`}
-                >
-                  <img 
-                    src={image} 
-                    alt={`Christmas character ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
+        <div className="overflow-x-auto mt-8">
+          <p className="text-center text-gray-600 mb-2">2. Select your Christmas spirit</p>
+          <div className="grid grid-cols-3 gap-4">
+            {CHRISTMAS_IMAGES.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => handleTargetSelect(image)}
+                className={`relative aspect-square rounded-lg overflow-hidden border-4 transition-all ${
+                  selectedTarget === image ? 'border-red-500 scale-105' : 'border-transparent hover:border-red-300'
+                }`}
+              >
+                <img 
+                  src={image} 
+                  alt={`Christmas character ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </button>
+            ))}
           </div>
         </div>
 
@@ -138,7 +137,7 @@ function App() {
             ) : (
               <span>
                 <Wand2 className="w-5 h-5" />
-                Make the Magic Happen!
+                Santify yourself!
               </span>
             )}
           </button>
