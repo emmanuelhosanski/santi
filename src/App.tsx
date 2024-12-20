@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Wand2 } from 'lucide-react';
 import { ImageUploader } from './components/ImageUploader';
-import { ChristmasEmoji } from './components/ChristmasEmoji';
 import { ErrorMessage } from './components/ErrorMessage';
 import { performFaceSwap } from './services/faceSwap';
 import { handleAPIError } from './utils/errors';
@@ -16,6 +15,8 @@ const CHRISTMAS_IMAGES = [
   'https://1250948203.rsc.cdn77.org/images/3ddc42af-94e8-437b-967c-fe254ee070dc.jpg',
   'https://1250948203.rsc.cdn77.org/images/daa08e22-80a4-4f8e-81c2-a46758da00dd.jpg'
 ];
+
+const CHRISTMAS_EMOJIS = ['🎄', '🎅', '❄️', '⛄', '🎁'];
 
 function App() {
   const [userImage, setUserImage] = useState<string | null>(null);
@@ -75,7 +76,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-green-50">
-      <ChristmasEmoji />
       
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12">
@@ -121,8 +121,18 @@ function App() {
             disabled={!userImage || !selectedTarget || loading}
             className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            <Wand2 className="w-5 h-5" />
-            <span>{loading ? 'Magic in Progress...' : 'Make the Magic Happen!'}</span>
+            {loading ? (
+              <div>
+                {CHRISTMAS_EMOJIS.map((emoji, index) => (
+                  <span key={index} style={{ animation: 'move 1s infinite' }}>{emoji}</span>
+                ))}
+              </div>
+            ) : (
+              <span>
+                <Wand2 className="w-5 h-5" />
+                Make the Magic Happen!
+              </span>
+            )}
           </button>
         </div>
 
